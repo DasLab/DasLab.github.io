@@ -227,11 +227,11 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 }
 .home-callout-right {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   text-align: left;
   line-height: 1.1;
   color: $text;
-  strong { color: inherit; font-weight: 800; }
+  strong { color: inherit; font-weight: 700; }
   .accent { color: $accent-hover; }
 }
 
@@ -351,6 +351,10 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   }
   .home-callout-left,
   .home-callout-right { text-align: center; }
+
+  /* Collapse the multi-line line breaks so the callouts flow as a single
+     line across the page on phone/tablet widths. */
+  .callout-break { display: none; }
 }
 
 /* ---------- people ---------- */
@@ -846,8 +850,12 @@ details.show-more {
   .home-banner {
     aspect-ratio: auto;
     height: 200px;
-    background-size: auto 100%;
-    background-position: 100% 50%;
+    /* logo_home.png is two carousel panes stacked (1022x696 = 1022x348 +
+       1022x348). Scale the image so its full height = 2x container,
+       making each pane exactly the container height; then anchor at the
+       top-left so only the FIRST pane (RNA fold & function) is visible. */
+    background-size: auto 200%;
+    background-position: 0 0;
   }
   /* Drop the desktop 5% breakout — at narrow viewports it caused horizontal
      overflow / scroll. */
