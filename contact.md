@@ -7,9 +7,11 @@ permalink: /contact/
 ---
 
 <div class="contact-grid">
-  <div>
+  <div class="contact-heading">
     <i class="word-contact" aria-label="Connect with us"></i>
+  </div>
 
+  <div class="contact-text">
     <div class="contact-block">
       <p><strong>Rhiju Das</strong> is in <strong>B421A</strong> (office), embedded in our home lab <strong>B419</strong> in the Beckman Center at Stanford University.</p>
     </div>
@@ -34,11 +36,11 @@ permalink: /contact/
 
     <p><strong>Interested in working with us?</strong> Reach out to Rhiju Das.</p>
   </div>
+</div>
 
-  <div>
-    <a href="https://maps.google.com/maps?q=279+Campus+Dr+W,+Stanford,+CA+94305" target="_blank" rel="noopener noreferrer external">
-      <img src="{{ '/assets/images/site/public/img_contact_map.jpg' | relative_url }}" alt="Map: Beckman Center, 279 Campus Drive West, Stanford CA">
-    </a>
-    <p>279 Campus Drive West<br>Stanford, CA 94305</p>
-  </div>
+<div class="contact-map-area">
+  <a href="https://maps.google.com/maps?q=279+Campus+Dr+W,+Stanford,+CA+94305" target="_blank" rel="noopener noreferrer external">
+    <img src="{{ '/assets/images/site/public/img_contact_map.jpg' | relative_url }}" alt="Map: Beckman Center, 279 Campus Drive West, Stanford CA">
+  </a>
+  <p>279 Campus Drive West, Stanford, CA 94305</p>
 </div>

@@ -279,6 +279,8 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   height: 39px;
   gap: 8px;
 }
+.home-divider-bars .bar-dark  { flex: 0 0 70%; }
+.home-divider-bars .bar-light { flex: 1 1 auto; }
 .home-divider-bars .bar-dark,
 .home-divider-bars .bar-light {
   height: 39px;
@@ -286,11 +288,9 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   background-size: 100% 100%;
 }
 .home-divider-bars .bar-dark  {
-  flex: 0 0 60%;
   background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
 }
 .home-divider-bars .bar-light {
-  flex: 1 1 auto;
   background-color: #ccc;
 }
 
@@ -484,25 +484,25 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
     font-size: 0.95rem;
     color: $text;
     font-weight: 800;
-    line-height: 1.3;
+    line-height: 1.05;
   }
   .pub-authors {
     margin: 0;
     font-size: 0.9rem;
     color: $text-muted;
-    line-height: 1.3;
+    line-height: 1.05;
   }
   .pub-meta {
     margin: 0;
     font-size: 0.9rem;
     color: $text-faint;
-    line-height: 1.3;
+    line-height: 1.05;
   }
   .pub-links {
     margin: 0.2rem 0 0;
     font-size: 0.85rem;
     color: $accent-hover;
-    line-height: 1.3;
+    line-height: 1.05;
     a {
       color: $accent-hover;
       &:hover { color: $text; }
@@ -705,22 +705,32 @@ details.show-more {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 2rem;
   align-items: start;
+  margin-bottom: 2rem;
 
+  .contact-heading { padding-top: 0.25rem; }
   h2 { color: $accent; font-size: 1.1rem; margin-top: 0; }
-  .contact-block { margin-bottom: 1.25rem; }
-  iframe, img { width: 100%; border: 0; border-radius: 4px; }
+  .contact-block { margin-bottom: 1rem; }
+  .contact-text p { margin: 0 0 0.75rem; }
 }
 @media (max-width: $bp-phone) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-map-area {
+  max-width: 600px;
+  margin: 0 0 1rem;
+
+  img { width: 100%; height: auto; border: 0; border-radius: 4px; display: block; }
+  p { margin: 0.5rem 0 0; color: $text-faint; font-size: 0.9rem; }
+}
 
 /* ---------- footer ---------- */
 
 .site-footer {
   max-width: $container;
-  margin: 0.5rem auto 1rem;
-  padding: 0 0 1rem;
+  margin: 0.1rem auto 0.4rem;
+  padding: 0 0 0.4rem;
 }
 
 /* Two-tone bars aligned with the hero banner: dark gradient on the left
@@ -728,7 +738,7 @@ details.show-more {
 .footer-bars {
   display: flex;
   height: 39px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.4rem;
 }
 .footer-bar-dark,
 .footer-bar-teal {
@@ -757,7 +767,7 @@ details.show-more {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  padding: 0.5rem 0;
+  padding: 0.1rem 0;
 
   img {
     width: auto;
