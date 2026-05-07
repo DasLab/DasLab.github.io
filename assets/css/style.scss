@@ -199,11 +199,14 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
     background-position: 0% 50% !important;
   }
   .page-hero-tab {
-    /* Mobile: just width + height: auto. The <img>'s intrinsic 349:111
-       aspect ratio handles the rest. */
-    width: 80%;
-    height: auto;
-    max-height: 60%;
+    /* Mobile: drive sizing from HEIGHT only and let width auto-derive
+       from the <img>'s intrinsic 349:111 aspect ratio. (Width-driven
+       sizing combined with max-height clipped the height at viewport
+       widths where the natural tab was taller than 60% of the 200px
+       container, distorting the aspect ratio during resize.) Right
+       anchor stays at -2% so placement is unchanged. */
+    width: auto;
+    height: 60%;
     bottom: 15%;
     right: -2%;
   }
