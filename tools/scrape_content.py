@@ -66,16 +66,8 @@ def write_md(path: Path, fm: dict, body: str = ""):
 
 # ---------- people / alumni ----------
 
-def _role_order(role: str) -> int:
-    r = role.lower()
-    if "principal investigator" in r: return 1
-    if "lab manager" in r or "manager" in r: return 2
-    if "research specialist" in r or "research scientist" in r: return 3
-    if "postdoctoral" in r or "postdoc" in r: return 4
-    if "ph.d." in r or "phd" in r or "graduate student" in r: return 5
-    if "rotation" in r: return 6
-    if "undergraduate" in r or "intern" in r: return 7
-    return 9
+def _is_pi(role: str) -> bool:
+    return "principal investigator" in role.lower()
 
 
 def _end_year(role: str):
@@ -115,14 +107,16 @@ def parse_people(html: str):
             txt = re.sub(r"\s+,", ",", txt)
             role = txt[:280]
         slug = slugify(name)
-        write_md(people_dir / f"{slug}.md", {
+        fm = {
             "name": name,
             "role": role,
             "photo": photo,
             "status": "current",
-            "role_order": _role_order(role),
             "last_name": _last_name(name),
-        })
+        }
+        if _is_pi(role):
+            fm["pi"] = True
+        write_md(people_dir / f"{slug}.md", fm)
         current_count += 1
 
     for past in soup.select("p.past_member"):

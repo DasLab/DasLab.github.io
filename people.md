@@ -7,8 +7,8 @@ permalink: /people/
 ---
 
 {% assign all_current = site.people | where: "status", "current" %}
-{% assign non_pi = all_current | where_exp: "p", "p.role_order != 1" | sort_natural: "last_name" %}
-{% assign pi     = all_current | where: "role_order", 1 %}
+{% assign non_pi = all_current | where_exp: "p", "p.pi != true" | sort_natural: "last_name" %}
+{% assign pi     = all_current | where: "pi", true %}
 {% assign current = non_pi | concat: pi %}
 
 {% comment %}

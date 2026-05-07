@@ -31,31 +31,19 @@ You'll need a (free) GitHub account, and Rhiju (or any DasLab org admin) needs t
    role: Postdoctoral Fellow, Biochemistry
    photo: /assets/images/people/jane-doe.jpg
    status: current
-   role_order: 4
+   last_name: doe
    ---
    ```
 
 5. Click **"Commit changes"** at the bottom.
 
-### What goes in `role_order`
-
-Lower numbers sort to the top of the people grid. Pick the first that applies:
-
-- **1** — Principal Investigator
-- **2** — Lab manager
-- **3** — Research specialist / scientist
-- **4** — Postdoctoral fellow
-- **5** — Ph.D. student
-- **6** — Rotation student
-- **7** — Undergraduate / intern
-- **9** — Other
-
-Within the same `role_order`, members are sorted alphabetically by name.
+The `last_name` is used for sorting (alphabetical, case-insensitive) — write it lowercased. Members are listed alphabetically by `last_name`. The principal investigator is pinned to the end (see below).
 
 ### Optional fields
 
 - `cv_url:` — link to a CV (e.g., a Dropbox link)
 - `profile_url:` — link to a Stanford profile page
+- `pi: true` — pins this person to the end of the current-members list. Only the principal investigator should have this.
 
 ---
 
@@ -72,7 +60,7 @@ When a lab member leaves, you only edit one file — no need to move it between 
    end_year: 2026
    ```
 
-   …and remove `role_order` (it's only used for current members). Replace it with the year they left.
+   `end_year` is the year they left. (You can also remove `pi`, `cv_url`, etc. if no longer relevant — but `last_name` should stay; it sorts within their year.)
 
 4. Update the `role` line to include the date range, e.g.:
 

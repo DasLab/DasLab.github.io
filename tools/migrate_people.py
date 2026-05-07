@@ -22,16 +22,8 @@ PEOPLE = ROOT / "_people"
 ALUMNI = ROOT / "_alumni"
 
 
-def role_order(role: str) -> int:
-    r = role.lower()
-    if "principal investigator" in r: return 1
-    if "lab manager" in r or "manager" in r: return 2
-    if "research specialist" in r or "research scientist" in r: return 3
-    if "postdoctoral" in r or "postdoc" in r: return 4
-    if "ph.d." in r or "phd" in r or "graduate student" in r: return 5
-    if "rotation" in r: return 6
-    if "undergraduate" in r or "intern" in r: return 7
-    return 9
+def is_pi(role: str) -> bool:
+    return "principal investigator" in role.lower()
 
 
 def end_year(role: str) -> int | None:
@@ -93,8 +85,8 @@ def main():
         if "status" in fm and fm.get("status") == "current":
             continue  # already migrated
         fm["status"] = "current"
-        if "role" in fm:
-            fm.setdefault("role_order", role_order(fm["role"]))
+        if "role" in fm and is_pi(fm["role"]):
+            fm["pi"] = True
         # Drop the legacy `order` field (which was filename-driven, no longer
         # meaningful since we sort by role_order + name now).
         fm.pop("order", None)
