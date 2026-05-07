@@ -343,7 +343,9 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   gap: 1.5rem;
   align-items: start;
   max-width: 1022px;
-  margin: 0 auto 2.5rem;
+  /* ~1 line of breathing room above the "what we do" row, matching the
+     spacing-above-text we have on the interior pages. */
+  margin: 1.5rem auto 2.5rem;
   padding: 0 1rem;
 }
 
@@ -905,9 +907,10 @@ details.show-more {
   background-image: url("{{ '/assets/images/site/public/footer_bar_teal.png' | relative_url }}");
 }
 
-/* Home page already has decorative bars between hero and content; suppress the
-   footer pair so the home doesn't look top-heavy with bars. */
-.page-home .footer-bars { display: none; }
+/* Footer bars are now shown on the home page too — the home divider
+   bars between hero and callouts have been removed, so the footer
+   bars are the only horizontal divider above the institutional logos
+   (matching every other page). */
 
 .institutional-logos {
   display: flex;
