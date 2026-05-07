@@ -7,6 +7,7 @@ slug: home
 <div class="home-stage">
   <a class="home-research-arrow" href="{{ '/research/' | relative_url }}" aria-label="Research">research</a>
   <div class="home-banner" role="img" aria-label="Das Lab — RNA fold and function from scratch"></div>
+  <img class="home-banner-tab" src="{{ '/assets/images/site/public/icon_home.png' | relative_url }}" alt="RNA fold and function from scratch">
 </div>
 
 <div class="home-divider-bars">
