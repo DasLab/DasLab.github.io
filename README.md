@@ -7,7 +7,7 @@ Static Jekyll site for [daslab.stanford.edu](https://daslab.stanford.edu).
 ```bash
 bundle install
 bundle exec jekyll serve
-# open http://localhost:4000/daslab-website/
+# open http://localhost:4000/
 ```
 
 ## Editing content
@@ -25,7 +25,7 @@ Each entry is a small markdown file with a frontmatter block at the top — copy
 
 Deployed via GitHub Pages, built by the workflow at `.github/workflows/pages.yml`. Currently live at:
 
-**https://daslab.github.io/daslab-website/**
+**https://daslab.github.io/**
 
 ### DNS cutover to daslab.stanford.edu (when ready)
 
