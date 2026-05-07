@@ -756,9 +756,11 @@ details.show-more {
 }
 /* Standalone slices extracted from nav_banners.png so each bar is just its
    own clean image (no leakage of the 'Group Member Site' header or the
-   institutional-logo strip from the source sprite). */
+   institutional-logo strip from the source sprite). The dark/teal seam is
+   set to land at the same proportion as the photo/gray seam in the hero
+   banner images (logo_<page>.jpg) — measured at ~68.86% of width. */
 .footer-bar-dark {
-  flex: 0 0 70%;
+  flex: 0 0 68.86%;
   background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
 }
 .footer-bar-teal {
