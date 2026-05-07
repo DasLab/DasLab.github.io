@@ -360,6 +360,12 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 
 @media (max-width: $bp-tablet) {
   .home-research-arrow { display: none; }
+}
+
+/* Callouts collapse to single column ONLY in portrait. In landscape
+   (e.g. iPhone landscape ~812px) the three-column desktop layout still
+   fits, so we keep that for visual consistency with the laptop view. */
+@media (max-width: $bp-tablet) and (orientation: portrait) {
   .home-callouts {
     grid-template-columns: 1fr;
     text-align: left;
@@ -368,7 +374,7 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   .home-callout-right { text-align: left; }
 
   /* Collapse the multi-line line breaks so the callouts flow as a single
-     line across the page on phone/tablet widths. */
+     line across the page on phone-portrait widths. */
   .callout-break { display: none; }
 }
 
@@ -941,7 +947,9 @@ details.show-more {
   .logo-hhmi                { height: 36px; width: auto; }
 }
 
-@media (max-width: $bp-phone) {
+/* Stack institutional logos vertically on phone PORTRAIT only — in
+   landscape the row layout fits and matches the desktop view. */
+@media (max-width: $bp-phone) and (orientation: portrait) {
   .institutional-logos {
     flex-direction: column;
     gap: 1.25rem;
