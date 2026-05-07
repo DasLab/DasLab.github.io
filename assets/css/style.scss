@@ -283,7 +283,10 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 
 .home-banner {
   width: 100%;
-  aspect-ratio: 1022 / 348;
+  /* logo_home.png was lightly trimmed (1022 -> 1015 px wide) to drop the
+     trailing pure-white pixels at the right edge. Aspect ratio matches
+     the trimmed dimensions. */
+  aspect-ratio: 1015 / 348;
   background: url("{{ '/assets/images/site/public/logo_home.png' | relative_url }}") no-repeat center top / 100% auto;
   border-radius: 2px;
 }
@@ -305,18 +308,22 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 /* Two horizontal decorative bars (sliced from nav_banners.png) */
 .home-divider-bars {
   display: flex;
-  /* Match the home-stage breakout so the bars span the same horizontal
-     extent as the hero, and the dark/light seam aligns with the
-     photo/gray seam in logo_home.png. */
-  width: 105%;
-  margin: 1rem -2.5% 1.5rem;
+  /* Sit at the regular site-main width while the banner above retains
+     its 5% breakout — visually compensates for the right-edge whitespace
+     the source PNG has baked in beyond the gray block. The bars (and
+     the callouts + institutional logos below) all live at the same
+     'inner' width. */
+  width: 100%;
+  margin: 1rem auto 1.5rem;
   max-width: none;
   height: 39px;
 }
-/* The dark/light seam sits ~5% to the left of where the photo/gray seam
-   actually lands in the rendered banner — set to 65.45% so the bar
-   seam visually aligns with the banner seam. */
-.home-divider-bars .bar-dark  { flex: 0 0 65.45%; }
+/* Math: the photo/gray seam in the trimmed image is at x=652 of 1015
+   = 64.24% of banner width. Banner is at 105% of site-main, so the
+   seam in absolute coords is at 64.24% × 105% = 67.45% of site-main.
+   Bars are at 100% of site-main, so bar-dark of 67.45% lands at the
+   same absolute X as the banner seam. */
+.home-divider-bars .bar-dark  { flex: 0 0 67.45%; }
 .home-divider-bars .bar-light { flex: 1 1 auto; }
 .home-divider-bars .bar-dark,
 .home-divider-bars .bar-light {
