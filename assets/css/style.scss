@@ -740,7 +740,7 @@ details.show-more {
 .footer-bars {
   display: flex;
   height: 39px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.08rem;
 }
 .footer-bar-dark,
 .footer-bar-teal {
@@ -769,7 +769,9 @@ details.show-more {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  padding: 0.1rem 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
 
   img {
     width: auto;
