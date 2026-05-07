@@ -736,7 +736,9 @@ details.show-more {
 .site-footer {
   max-width: $container;
   margin: 0.1rem auto 0.4rem;
-  padding: 0 0 0.4rem;
+  /* Match the horizontal padding of .site-main so the footer bars line up
+     under the hero banner's edges to the pixel. */
+  padding: 0 1.25rem 0.4rem;
 }
 
 /* Two-tone bars aligned with the hero banner: dark gradient on the left
