@@ -187,12 +187,12 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
    the gray block + teal tab stay visible; the photo crops from the left.
    The teal tab keeps its desktop proportions so it reads clearly — it's
    OK if it overlaps the photo. */
-@media (max-width: $bp-phone) {
+@media (max-width: $bp-tablet) {
   .page-hero {
-    aspect-ratio: auto;
-    height: 200px;
-    background-size: auto 100%;
-    background-position: left center;
+    aspect-ratio: auto !important;
+    height: 200px !important;
+    background-size: auto 100% !important;
+    background-position: 0% 50% !important;
   }
   .page-hero-tab {
     width: 80%;
