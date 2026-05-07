@@ -451,11 +451,7 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
-  padding: 0.6rem 0;
-
-  /* Dividers only between publications (not before the first or after the
-     last in a given year group). */
-  & + .publication { border-top: 1px dotted $text-faint; }
+  padding: 0.4rem 0;
 
   /* When a thumbnail is present, switch to two-column layout. The thumbnail
      is fixed-width; height stays auto so the natural aspect ratio is
@@ -463,6 +459,18 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   &:has(.pub-thumb) {
     grid-template-columns: 180px 1fr;
     gap: 1.25rem;
+  }
+
+  /* Without a thumbnail, render authors / title / journal / links as a
+     single flowing line — matching the original site's typesetting. */
+  &:not(:has(.pub-thumb)) {
+    .pub-text > p {
+      display: inline;
+      margin: 0;
+    }
+    .pub-authors::after,
+    .pub-title::after,
+    .pub-meta::after { content: " "; }
   }
 
   .pub-thumb {
