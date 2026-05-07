@@ -179,6 +179,9 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   width: 36%;
   height: auto;
   max-height: 60%;
+  /* Lock aspect ratio explicitly so the rendered tab always matches the
+     source PNG (349x111). Prevents subtle stretching across breakpoints. */
+  aspect-ratio: 349 / 111;
   z-index: 2;
   filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
 }
@@ -195,12 +198,12 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
     background-position: 0% 50% !important;
   }
   .page-hero-tab {
-    /* Fix the height so the tab keeps its natural 349:111 aspect ratio
-       on phone & landscape. width:80% + max-height:50% used to fight
-       each other, squishing the artwork. */
-    width: auto;
-    height: 50%;
-    max-height: 50%;
+    /* Match the source PNG's natural 349:111 ratio. Hold the existing
+       horizontal extent via width: 80% and let height auto-compute from
+       aspect-ratio so the tab is shorter (no vertical stretching). */
+    width: 80%;
+    height: auto;
+    max-height: 60%;
     bottom: 15%;
     right: -2%;
   }
@@ -836,16 +839,22 @@ details.show-more {
   margin: 0;
   line-height: 0;
 
+  flex-wrap: wrap;
+
   img {
     width: auto;
+    /* Never let flex compress these — aspect ratio must stay locked to
+       the source PNG. If they don't fit on one row, flex-wrap above puts
+       them on multiple rows. */
+    flex-shrink: 0;
     opacity: 0.9;
     transition: opacity 0.15s;
     &:hover { opacity: 1; }
   }
 
-  .logo-stanford-university { height: 45px; }
-  .logo-stanford-medicine   { height: 45px; }
-  .logo-hhmi                { height: 45px; }
+  .logo-stanford-university { height: 45px; width: auto; }
+  .logo-stanford-medicine   { height: 45px; width: auto; }
+  .logo-hhmi                { height: 45px; width: auto; }
 }
 
 @media (max-width: $bp-phone) {
@@ -866,9 +875,10 @@ details.show-more {
     /* logo_home.png is two carousel panes stacked (1022x696 = 1022x348 +
        1022x348). Scale the image so its full height = 2x container,
        making each pane exactly the container height; then anchor at the
-       top-left so only the FIRST pane (RNA fold & function) is visible. */
+       top-RIGHT so only the FIRST pane (RNA fold & function) is visible
+       and the 'from scratch' tab on the right is what shows. */
     background-size: auto 200%;
-    background-position: 0 0;
+    background-position: 100% 0;
   }
   /* Drop the desktop 5% breakout — at narrow viewports it caused horizontal
      overflow / scroll. */
