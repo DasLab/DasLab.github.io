@@ -6,10 +6,25 @@ hero_slug: people
 permalink: /people/
 ---
 
-{% assign current = site.people | where: "status", "current" | sort_natural: "name" %}
-{% assign current = current | sort: "role_order" %}
-{% assign alumni  = site.people | where: "status", "alumnus" %}
-{% assign alumni  = alumni | sort: "name" | sort: "end_year" | reverse %}
+{% assign all_current = site.people | where: "status", "current" %}
+{% assign non_pi = all_current | where_exp: "p", "p.role_order != 1" | sort_natural: "last_name" %}
+{% assign pi     = all_current | where: "role_order", 1 %}
+{% assign current = non_pi | concat: pi %}
+
+{% comment %}
+  Alumni: order by end_year descending, then alphabetical by last_name
+  within each year. Liquid's sort isn't reliably stable, so we group by
+  year explicitly and concat in order.
+{% endcomment %}
+{% assign all_alumni = site.people | where: "status", "alumnus" %}
+{% assign years = all_alumni | map: "end_year" | uniq | compact | sort | reverse %}
+{% assign alumni = "" | split: "" %}
+{% for y in years %}
+  {% assign yr = all_alumni | where: "end_year", y | sort_natural: "last_name" %}
+  {% assign alumni = alumni | concat: yr %}
+{% endfor %}
+{% assign no_year = all_alumni | where_exp: "a", "a.end_year == nil" | sort_natural: "last_name" %}
+{% assign alumni = alumni | concat: no_year %}
 
 <h2 class="section-heading">Current</h2>
 

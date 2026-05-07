@@ -6,4 +6,5 @@ cv_url: "https://www.dropbox.com/scl/fi/ga8tuc3djn4fvwboxu33r/RhijuDas_Curriculu
 profile_url: "https://profiles.stanford.edu/rhiju-das"
 status: current
 role_order: 1
+last_name: das
 ---

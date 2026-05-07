@@ -83,6 +83,13 @@ def _end_year(role: str):
     return max(years) if years else None
 
 
+def _last_name(name: str) -> str:
+    """Use the last whitespace-separated token of `name`, lowercased,
+    as a sort key. Strip any parenthetical (e.g. '(formerly Smith)')."""
+    n = re.sub(r"\([^)]*\)", "", name).strip()
+    return n.rsplit(None, 1)[-1].lower() if n else ""
+
+
 def parse_people(html: str):
     """Emit a unified _people/ collection. Current members get
     status: current and a derived role_order; alumni get status: alumnus
@@ -114,6 +121,7 @@ def parse_people(html: str):
             "photo": photo,
             "status": "current",
             "role_order": _role_order(role),
+            "last_name": _last_name(name),
         })
         current_count += 1
 
@@ -128,7 +136,7 @@ def parse_people(html: str):
         target = people_dir / f"{slug}.md"
         if target.exists():
             target = people_dir / f"{slug}-alumni.md"
-        fm = {"name": name, "role": role, "status": "alumnus"}
+        fm = {"name": name, "role": role, "status": "alumnus", "last_name": _last_name(name)}
         ey = _end_year(role)
         if ey: fm["end_year"] = ey
         write_md(target, fm)
