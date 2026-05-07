@@ -1,0 +1,34 @@
+title: Das Lab
+description: Stanford Biochemistry Department — model and design the RNA sequences that define and regulate living systems.
+url: "https://daslab.github.io"
+baseurl: "/daslab-website"
+
+permalink: /:collection/:name/
+
+collections:
+  people:
+    output: false
+  alumni:
+    output: false
+  publications:
+    output: false
+  news:
+    output: true
+    permalink: /news/:name/
+  resources:
+    output: false
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: "default" }
+  - scope: { path: "", type: "news" }
+    values: { layout: "post" }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .gitignore
+
+plugins: []
