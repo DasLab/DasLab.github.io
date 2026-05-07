@@ -282,10 +282,17 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 .home-divider-bars .bar-dark,
 .home-divider-bars .bar-light {
   height: 39px;
-  background: url("{{ '/assets/images/site/public/nav_banners.png' | relative_url }}") no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-.home-divider-bars .bar-dark  { flex: 0 0 60%; background-position: 0 -15px; }
-.home-divider-bars .bar-light { flex: 1 1 auto; background-position: -514px -55px; }
+.home-divider-bars .bar-dark  {
+  flex: 0 0 60%;
+  background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
+}
+.home-divider-bars .bar-light {
+  flex: 1 1 auto;
+  background-color: #ccc;
+}
 
 .home-callouts {
   display: grid;
@@ -720,14 +727,20 @@ details.show-more {
 .footer-bar-dark,
 .footer-bar-teal {
   height: 39px;
-  background-image: url("{{ '/assets/images/site/public/nav_banners.png' | relative_url }}");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-/* Sprite slices from nav_banners.png. The dark gradient (footer_left) lives at
-   y=15-54, teal block (footer_right) at x=0-256, y=55-94. Ratio ~70/30 to
-   align with the hero banner's photo/tab split. */
-.footer-bar-dark { flex: 0 0 70%; background-position: 0 -15px; background-size: auto 39px; }
-.footer-bar-teal { flex: 1 1 auto; background-position: 0 -55px; background-size: auto 39px; }
+/* Standalone slices extracted from nav_banners.png so each bar is just its
+   own clean image (no leakage of the 'Group Member Site' header or the
+   institutional-logo strip from the source sprite). */
+.footer-bar-dark {
+  flex: 0 0 70%;
+  background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
+}
+.footer-bar-teal {
+  flex: 1 1 auto;
+  background-image: url("{{ '/assets/images/site/public/footer_bar_teal.png' | relative_url }}");
+}
 
 /* Home page already has decorative bars between hero and content; suppress the
    footer pair so the home doesn't look top-heavy with bars. */
