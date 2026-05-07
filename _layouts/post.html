@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="news-post">
+  <p class="news-date"><a href="{{ '/news/' | relative_url }}">← All news</a> · {{ page.date | date: "%B %-d, %Y" }}</p>
+  {% if page.title %}<h1 class="news-title">{{ page.title }}</h1>{% endif %}
+  {% if page.image %}
+    <img class="news-image" src="{{ page.image | relative_url }}" alt="">
+  {% endif %}
+  <div class="news-body">
+    {{ content }}
+  </div>
+</article>

@@ -14,7 +14,7 @@ collections:
     output: false
   news:
     output: true
-    permalink: /news/:name/
+    permalink: /news/:year-:month-:day-:slug/
   resources:
     output: false
 
@@ -30,5 +30,7 @@ exclude:
   - vendor
   - README.md
   - .gitignore
+  - _scrape
+  - tools
 
 plugins: []
