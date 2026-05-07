@@ -200,13 +200,11 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   }
   .page-hero-tab {
     /* Mobile: drive sizing from HEIGHT only and let width auto-derive
-       from the <img>'s intrinsic 349:111 aspect ratio. (Width-driven
-       sizing combined with max-height clipped the height at viewport
-       widths where the natural tab was taller than 60% of the 200px
-       container, distorting the aspect ratio during resize.) Right
-       anchor stays at -2% so placement is unchanged. */
+       from the <img>'s intrinsic 349:111 aspect ratio. Reduced from
+       60% -> 45% so the tab isn't horizontally cramped at portrait
+       iPhone-mini widths (~375px). */
     width: auto;
-    height: 60%;
+    height: 45%;
     bottom: 15%;
     right: -2%;
   }
@@ -353,10 +351,10 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   .home-research-arrow { display: none; }
   .home-callouts {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .home-callout-left,
-  .home-callout-right { text-align: center; }
+  .home-callout-right { text-align: left; }
 
   /* Collapse the multi-line line breaks so the callouts flow as a single
      line across the page on phone/tablet widths. */
@@ -767,7 +765,9 @@ details.show-more {
 @media (max-width: $bp-tablet) {
   .research-row {
     grid-template-columns: 1fr;
-    > i { margin: 0 auto; }
+    /* Left-align the word-art sprites (3D puzzles, RNA structures…,
+       Cloud biochemistry) at narrow widths instead of centering. */
+    > i { margin: 0; }
     > a { grid-column: 1; }
   }
 }
@@ -905,15 +905,16 @@ details.show-more {
      edge of logo_home.png anchored to the right of the viewport — matches
      the .page-hero approach used on interior pages. */
   .home-banner {
-    aspect-ratio: auto;
-    height: 200px;
-    /* logo_home.png is two carousel panes stacked (1022x696 = 1022x348 +
-       1022x348). Scale the image so its full height = 2x container,
-       making each pane exactly the container height; then anchor at the
-       top-RIGHT so only the FIRST pane (RNA fold & function) is visible
-       and the 'from scratch' tab on the right is what shows. */
-    background-size: auto 200%;
-    background-position: 100% 0;
+    /* Show only the first carousel pane (1022x348) and let it span the
+       full viewport width so nothing in the artwork — including the
+       'RNA fold & function from scratch' tab on the right — gets clipped
+       at narrow phone widths. The container's height tracks the pane's
+       aspect ratio so it stays proportional, and background-size 100% 200%
+       puts the top pane in the visible window. */
+    aspect-ratio: 1022 / 348;
+    height: auto;
+    background-size: 100% 200%;
+    background-position: 0 0;
   }
   /* Drop the desktop 5% breakout — at narrow viewports it caused horizontal
      overflow / scroll. */
