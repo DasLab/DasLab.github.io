@@ -825,6 +825,23 @@ details.show-more {
 .footer-bar-dark {
   flex: 0 0 68.86%;
   background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
+  position: relative;
+}
+
+/* Subtle "Admin" shortcut for lab members — links to CONTRIBUTING.md.
+   Anchored in the dark bar, low-contrast text so it doesn't pull
+   attention from the institutional logos but is discoverable. */
+.footer-admin {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  &:hover { color: rgba(255, 255, 255, 1); }
 }
 .footer-bar-teal {
   flex: 1 1 auto;
