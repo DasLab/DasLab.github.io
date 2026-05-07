@@ -828,12 +828,12 @@ details.show-more {
 .footer-bar-dark {
   flex: 0 0 68.86%;
   background-image: url("{{ '/assets/images/site/public/footer_bar_dark.png' | relative_url }}");
-  position: relative;
 }
+.footer-bar-teal { position: relative; }
 
 /* Subtle "Admin" shortcut for lab members — links to CONTRIBUTING.md.
-   Anchored in the dark bar, low-contrast text so it doesn't pull
-   attention from the institutional logos but is discoverable. */
+   Color matches the bar background so it's effectively hidden until
+   hovered. */
 .footer-admin {
   position: absolute;
   right: 0.6rem;
@@ -842,10 +842,20 @@ details.show-more {
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
-  &:hover { color: rgba(255, 255, 255, 1); }
+  /* Inside the teal footer bar — teal text on teal bg, hidden until
+     hover. Footer_bar_teal.png is roughly #007e79. */
+  color: $accent;
+  &:hover { color: #fff; }
 }
+
+/* On the home page, the admin link lives in the gray .bar-light. Match
+   that bar's #ccc background so it is completely invisible until hovered. */
+.home-admin {
+  color: #ccc;
+  &:hover { color: $text; }
+}
+.home-divider-bars .bar-light { position: relative; }
 .footer-bar-teal {
   flex: 1 1 auto;
   background-image: url("{{ '/assets/images/site/public/footer_bar_teal.png' | relative_url }}");

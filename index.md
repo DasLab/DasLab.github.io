@@ -9,9 +9,11 @@ slug: home
   <div class="home-banner" role="img" aria-label="Das Lab — RNA fold and function from scratch"></div>
 </div>
 
-<div class="home-divider-bars" aria-hidden="true">
+<div class="home-divider-bars">
   <div class="bar-dark"></div>
-  <div class="bar-light"></div>
+  <div class="bar-light">
+    <a class="footer-admin home-admin" href="https://github.com/DasLab/DasLab.github.io/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Admin</a>
+  </div>
 </div>
 
 <div class="home-callouts">
