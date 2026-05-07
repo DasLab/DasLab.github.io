@@ -455,6 +455,7 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   grid-template-columns: 1fr;
   align-items: start;
   padding: 0.4rem 0;
+  line-height: 1;
 
   /* When a thumbnail is present, switch to two-column layout. The thumbnail
      is fixed-width; height stays auto so the natural aspect ratio is
