@@ -2,7 +2,11 @@
 
 Static Jekyll site for [daslab.stanford.edu](https://daslab.stanford.edu).
 
-## Local development
+## For lab members: editing content
+
+**See [CONTRIBUTING.md](CONTRIBUTING.md)** for step-by-step instructions on adding people, news, and publications — no command line needed.
+
+## Local development (developers)
 
 ```bash
 bundle install
@@ -10,31 +14,9 @@ bundle exec jekyll serve
 # open http://localhost:4000/
 ```
 
-## Editing content
-
-Lab members can update content directly through the GitHub web UI — no command line needed:
-
-- **People:** edit a file in `_people/`
-- **Alumni:** edit a file in `_alumni/`
-- **News:** add a file to `_news/` (filename: `YYYY-MM-DD-short-title.md`)
-- **Publications:** edit a file in `_publications/`
-
-Each entry is a small markdown file with a frontmatter block at the top — copy an existing entry as a template. Save the change and the site rebuilds in ~30 seconds.
-
 ## Hosting
 
-Deployed via GitHub Pages, built by the workflow at `.github/workflows/pages.yml`. Currently live at:
-
-**https://daslab.github.io/**
-
-### DNS cutover to daslab.stanford.edu (when ready)
-
-Two steps, in order:
-
-1. **Update DNS at Stanford.** Have Stanford IT change the CNAME (or A/AAAA records) for `daslab.stanford.edu` to point at GitHub Pages. The four GitHub Pages IPs for apex domains are: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. For a CNAME, point at `daslab.github.io`.
-2. **Add a `CNAME` file to this repo** containing exactly `daslab.stanford.edu` and push. GitHub will detect it and provision a Let's Encrypt cert automatically (give it a few minutes after DNS propagates).
-
-Until DNS resolves to GitHub Pages, leave the `CNAME` file out — committing it early will make GitHub Pages redirect the staging URL to `daslab.stanford.edu`, which still points at AWS, breaking the preview.
+Deployed via GitHub Pages at **https://daslab.stanford.edu**, built by the workflow at `.github/workflows/pages.yml`. Every push to `main` triggers a rebuild (~30 seconds).
 
 ## Re-running the content scraper
 
