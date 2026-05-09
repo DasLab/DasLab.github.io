@@ -4,7 +4,9 @@ Static Jekyll site for [daslab.stanford.edu](https://daslab.stanford.edu).
 
 ## For lab members: editing content
 
-**See [CONTRIBUTING.md](CONTRIBUTING.md)** for step-by-step instructions on adding people, news, and publications — no command line needed.
+**→ Read [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions.**
+
+If you want to add or update people, news, or publications, start there — it walks through everything with no command line required. Do not edit files directly without reading it first.
 
 ## Local development (developers)
 
