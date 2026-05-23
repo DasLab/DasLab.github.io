@@ -250,6 +250,20 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 .word-research-2 { width: 138px; height: 121px; background-position: 0 -69px; }
 .word-research-3 { width: 138px; height: 84px;  background-position: 0 -191px; }
 
+.research-heading {
+  margin: 0.5rem 0 0;
+  align-self: start;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $text;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  .accent { color: $accent-hover; font-size: 1.68rem; }
+  .thin { font-weight: 300; }
+  .large { font-size: 2.1rem; }
+}
+
 .word-resources-online,
 .word-resources-resources {
   display: inline-block;
@@ -416,15 +430,17 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 /* ---------- people ---------- */
 
 .people-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.75rem 1.25rem;
   margin: 1.5rem 0 2.5rem;
 }
 
-@media (max-width: $bp-tablet) { .people-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: $bp-phone)  { .people-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 1rem; } }
-@media (max-width: 420px)      { .people-grid { grid-template-columns: 1fr; } }
+.person-card { width: calc(25% - 1rem); }
+@media (max-width: $bp-tablet) { .person-card { width: calc(33.33% - 1rem); } }
+@media (max-width: $bp-phone)  { .person-card { width: calc(50% - 0.75rem); } .people-grid { gap: 1.25rem 1rem; } }
+@media (max-width: 420px)      { .person-card { width: 100%; } }
 
 .person-card {
   display: flex;
@@ -464,8 +480,9 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
 
 .section-heading {
   color: $accent-hover;
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1;
   margin: 2rem 0 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px dotted $text-faint;
@@ -644,7 +661,7 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: center;
   padding: 1.25rem 0;
   border-bottom: 1px dotted $text-faint;
 
@@ -654,7 +671,7 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
     object-fit: contain;
     background: transparent;
     border-radius: 3px;
-    align-self: start;
+    align-self: center;
     justify-self: end;
   }
   .news-date {
