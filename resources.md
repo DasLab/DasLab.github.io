@@ -7,10 +7,10 @@ permalink: /resources/
 ---
 
 <div class="resource-row">
-  <p class="resource-text"><strong>For RNA biologists.</strong> Workflows for modeling RNA structure from sequence, including links to all relevant packages and documentation, are available on <a href="https://ribokit.stanford.edu/" target="_blank" rel="noopener noreferrer external">RiboKit</a>.</p>
+  <p class="resource-text"><strong>For AI scientists.</strong> We've been hosting numerous Kaggle competitions to drive progress in RNA modeling. Find the train/val/test sets and rigorous leaderboards on <a href="https://www.kaggle.com/search?q=stanford+RNA+in%3Acompetitions" target="_blank" rel="noopener noreferrer external">Kaggle</a>.</p>
   <div class="resource-icon">
-    <a href="https://ribokit.stanford.edu/" target="_blank" rel="noopener noreferrer external">
-      <img src="{{ '/assets/images/site/public/img_resources_ribokit.png' | relative_url }}" alt="RiboKit">
+    <a href="https://www.kaggle.com/search?q=stanford+RNA+in%3Acompetitions" target="_blank" rel="noopener noreferrer external">
+      <img src="{{ '/assets/images/site/public/img_resources_kaggle.png' | relative_url }}" alt="Kaggle">
     </a>
   </div>
 </div>
