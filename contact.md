@@ -8,12 +8,12 @@ permalink: /contact/
 
 <div class="contact-grid">
   <div class="contact-heading">
-    <i class="word-contact" aria-label="Connect with us"></i>
+    <p class="home-callout-left">Connect<br><span class="accent">with us</span></p>
   </div>
 
   <div class="contact-text">
     <div class="contact-block">
-      <p><strong>Rhiju Das</strong> is in <strong>B421A</strong> (office), embedded in our home lab <strong>B419</strong> in the Beckman Center at Stanford University.</p>
+      <p><strong>Rhiju Das</strong> is in <strong>B421A</strong> (office), embedded in our home lab <strong>B419</strong> in the <a href="https://maps.google.com/maps?q=279+Campus+Dr+W,+Stanford,+CA+94305" target="_blank" rel="noopener noreferrer external">Beckman Center at Stanford University</a>.</p>
     </div>
 
     <div class="contact-block">
@@ -26,12 +26,12 @@ permalink: /contact/
     </div>
 
     <div class="contact-block">
-      <p><strong>E-mail</strong> &nbsp; rhiju <em>[at]</em> stanford.edu</p>
+      <p><strong>E-mail</strong> &nbsp; <a href="mailto:rhiju@stanford.edu">rhiju@stanford.edu</a></p>
     </div>
 
     <div class="contact-block">
       <p><strong>Administrative assistant:</strong><br>
-      Lisa Sharp, lasharp <em>[at]</em> stanford.edu</p>
+      Lisa Sharp, <a href="mailto:lasharp@stanford.edu">lasharp@stanford.edu</a></p>
     </div>
 
     <p><strong>Interested in working with us?</strong> Reach out to Rhiju Das.</p>
