@@ -3,6 +3,8 @@ title: Minimization of the E. coli ribosome, aided and optimized by community sc
 year: 2024
 authors: Tangpradabkul, T., Palo, M., Townley, J., Hsu, K.B., Eterna participants, Smaga, S., Das, R., Schepartz, A.
 journal: Nucleic Acids Research
+volume: "2024"
+pages: "1-16"
 pdf: /assets/pdfs/gkad1254.pdf
 doi: "https://doi.org/10.1093/nar/gkad1254"
 order: 18

@@ -7,7 +7,7 @@ permalink: /publications/
 ---
 
 <p class="pub-search">
-  <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=das+rhiju" target="_blank" rel="noopener noreferrer external">
+  <a href="https://pubmed.ncbi.nlm.nih.gov/?term=das+rhiju&sort=date" target="_blank" rel="noopener noreferrer external">
     <span class="pub-search-arrow" aria-hidden="true"></span>
     <span class="pub-search-text">Search for papers from the Das Lab on <strong>PubMed</strong></span>
   </a>
@@ -30,7 +30,7 @@ permalink: /publications/
         <div class="pub-text">
           <p class="pub-authors">{{ pub.authors }}</p>
           <p class="pub-title">"<span class="pub-title-text">{{ pub.title }}</span>"</p>
-          {% if pub.journal %}<p class="pub-meta"><em>{{ pub.journal }}</em></p>{% endif %}
+          {% if pub.journal %}<p class="pub-meta"><em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.</p>{% endif %}
           <p class="pub-links">
             {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">Paper</a>{% endif %}
             {% if pub.doi %}<a href="{{ pub.doi }}" target="_blank" rel="noopener">Link</a>{% endif %}
@@ -60,7 +60,7 @@ permalink: /publications/
           <div class="pub-text">
             <p class="pub-authors">{{ pub.authors }}</p>
             <p class="pub-title">"<span class="pub-title-text">{{ pub.title }}</span>"</p>
-            {% if pub.journal %}<p class="pub-meta"><em>{{ pub.journal }}</em></p>{% endif %}
+            {% if pub.journal %}<p class="pub-meta"><em>{{ pub.journal }}</em>{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.</p>{% endif %}
             <p class="pub-links">
               {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">Paper</a>{% endif %}
               {% if pub.doi %}<a href="{{ pub.doi }}" target="_blank" rel="noopener">Link</a>{% endif %}

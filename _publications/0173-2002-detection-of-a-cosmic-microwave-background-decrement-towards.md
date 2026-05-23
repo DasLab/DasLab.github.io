@@ -3,6 +3,8 @@ title: Detection of a cosmic microwave background decrement towards a cluster of
 year: 2002
 authors: Cotter G., Buttery, H.J., Rawlings, S., Croft, S., Hill, G.J., Gay, P., Das, R., Drory, N., Grainge, K., Grainger, W.F., Jones, M.E., Pooley, G.G., and Saunders, R.
 journal: Monthly Notices of the Royal Astronomical Society
+volume: "331"
+pages: "1-6"
 pdf: /assets/pdfs/2002_Cotter_MNRAS_mJy.pdf
 doi: "http://onlinelibrary.wiley.com/doi/10.1046/j.1365-8711.2002.04996.x/abstract"
 order: 173
