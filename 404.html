@@ -1,0 +1,27 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+---
+
+<style>
+.not-found { text-align: center; padding: 4rem 1rem; }
+.not-found h1 { font-size: 2rem; margin-bottom: 1rem; }
+.not-found p { color: #666; }
+</style>
+
+<div class="not-found">
+  <h1>Page not found</h1>
+  <p>The page you're looking for doesn't exist or has moved.</p>
+  <p><a href="/">Go to the homepage</a></p>
+</div>
+
+<script>
+// Redirect old Django site PDF paths to new Jekyll paths
+// Old: /site_data/pub_pdf/foo.pdf  →  New: /assets/pdfs/foo.pdf
+var path = window.location.pathname;
+var match = path.match(/^\/site_data\/pub_pdf\/(.+\.pdf)$/i);
+if (match) {
+  window.location.replace('/assets/pdfs/' + match[1]);
+}
+</script>
