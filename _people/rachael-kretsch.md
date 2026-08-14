@@ -1,7 +1,7 @@
 ---
 name: Rachael Kretsch
-role: "Postdoctoral associate Biophysics Joint: Wah Chiu Lab"
-photo: /assets/images/people/RachaelK.jpg
-status: current
+role: "Ph.D. Student, 2019-2025. Postdoctoral Associate 2025-2026"
+status: alumnus
+end_year: 2026
 last_name: kretsch
 ---
