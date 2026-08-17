@@ -117,7 +117,7 @@ The news index shows the 10 most recent posts; older ones tuck under "Previous n
 
 1. (Optional) If the paper is "featured" — meaning you want it shown with a thumbnail at the top of its year — upload the figure to `assets/images/publications/` and note the path.
 2. Open `_publications/`, click **"Add file → Create new file"**.
-3. Name it `<year>-<short-title-slug>.md`. The `<year>-` prefix is what keeps publications grouped by year.
+3. Name it `<NNNN>-<year>-<short-title-slug>.md`, where `<NNNN>` is a four-digit position number. The newest paper is `0000-`; existing files count up from there, oldest last.
 4. Paste this template:
 
    ```yaml
@@ -127,7 +127,8 @@ The news index shows the 10 most recent posts; older ones tuck under "Previous n
    authors: Doe, J., Smith, K., Das, R.
    journal: Nature Communications
    pdf: https://example.com/paper.pdf      # link to the PDF
-   doi: https://doi.org/10.1038/s41467-...  # link to the journal
+   doi: "https://doi.org/10.1038/s41467-..."  # link to the journal
+   order: 0                                 # must match the NNNN in the filename
    ---
    ```
 
@@ -147,7 +148,9 @@ The news index shows the 10 most recent posts; older ones tuck under "Previous n
 
 6. Commit.
 
-Publications sort newest year first; within a year, files sort alphabetically by filename — name your files starting with a `<year>-` prefix and they'll group cleanly.
+Publications are listed in `order` (0 first), and grouped under year headings in that same order — so `order` is the master list, newest paper first.
+
+**Adding a paper at the very top** means every other paper shifts down by one — tedious by hand, so ask Rhiju (or Claude) to renumber the collection. To slot a paper further down the list instead, give it the `order` of the paper it should precede and bump only the files below it.
 
 ---
 
