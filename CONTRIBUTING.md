@@ -109,7 +109,7 @@ The alumni list is automatically sorted by `end_year` (newest first), then alpha
 
 5. Commit.
 
-The news index shows the 10 most recent posts; older ones tuck under "Previous news" automatically.
+The news index shows every post from the current year (or the 10 most recent posts, whichever is more); older ones tuck under "Previous news" automatically.
 
 ---
 
