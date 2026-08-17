@@ -41,6 +41,7 @@ The `last_name` is used for sorting (alphabetical, case-insensitive) — write i
 
 ### Optional fields
 
+- `affiliation:` — department or funding affiliation (e.g., `Biochemistry`, `HHMI`), shown on its own line under the role
 - `cv_url:` — link to a CV (e.g., a Dropbox link)
 - `profile_url:` — link to a Stanford profile page
 - `pi: true` — pins this person to the end of the current-members list. Only the principal investigator should have this.

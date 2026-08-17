@@ -34,6 +34,7 @@ permalink: /people/
     {% if member.photo %}<img class="person-photo" src="{{ member.photo | relative_url }}" alt="{{ member.name }}">{% else %}<div class="person-photo"></div>{% endif %}
     <p class="person-name">{{ member.name }}</p>
     <p class="person-role">{{ member.role }}</p>
+    {% if member.affiliation %}<p class="person-affiliation">{{ member.affiliation }}</p>{% endif %}
     {% if member.cv_url or member.profile_url %}
     <p class="person-links">
       {% if member.cv_url %}<a href="{{ member.cv_url }}" target="_blank" rel="noopener">Curriculum Vitae</a>{% endif %}

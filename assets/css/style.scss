@@ -460,7 +460,8 @@ hr { border: 0; border-top: 1px dotted $text-faint; margin: 2rem 0; }
     color: $text;
     font-size: 0.95rem;
   }
-  .person-role {
+  .person-role,
+  .person-affiliation {
     margin: 0;
     font-size: 0.85rem;
     color: $text-faint;
