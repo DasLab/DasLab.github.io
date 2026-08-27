@@ -7,5 +7,5 @@ thumb: /assets/images/publications/tC19z_maponly.png
 pdf: /assets/pdfs/Szokoli_Hingey_bioRxiv_2026.pdf
 doi: "https://doi.org/10.64898/2026.08.14.744467"
 featured: True
-order: 0
+order: 1
 ---
