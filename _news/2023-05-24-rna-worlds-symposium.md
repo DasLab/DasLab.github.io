@@ -1,7 +1,7 @@
 ---
 title: RNA Worlds symposium
 date: 2023-05-24
-image: /assets/images/news/rna_worlds_logo_0_copy.webp
+image: /assets/images/news/rna_worlds_logo.png
 ---
 
 <p class="TEXT">
