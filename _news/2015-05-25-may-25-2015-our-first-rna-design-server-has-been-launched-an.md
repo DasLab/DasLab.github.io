@@ -1,6 +1,7 @@
 ---
 title: May 25, 2015 Our first RNA design server has been launched, and published 
 date: 2015-05-25
+published: false
 image: /assets/images/news/rna_redesign_logo.png
 ---
 

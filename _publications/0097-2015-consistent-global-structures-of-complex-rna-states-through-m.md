@@ -13,5 +13,5 @@ order: 97
 link_labels:
   - "Software"
 link_urls:
-  - "http://rmdb.stanford.edu/mapseeker/"
+  - "https://ribokit.github.io/MAPseeker/"
 ---

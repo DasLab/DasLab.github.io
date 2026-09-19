@@ -5,8 +5,5 @@ image: /assets/images/news/myosin-image_680x320_0_0.jpg
 ---
 
 <p class="TEXT">
-              Congratulations to collaborators Tosan Omabegho &amp; Zev Bryant for reporting their design of a fast molecular machine whose direction can be reversed back and forth by RNA. The paper <b><a href="https://dx.doi.org/10.1038/s41565-017-0005-y">"Controllable molecular motors engineered from myosin and RNA"</a></b> and a <a href="https://cen.acs.org/articles/95/i45/Engineered-myosin-motor-uses-RNA..html">commentary</a> are now out in Nature Nanotechnology.
+              Congratulations to collaborators Tosan Omabegho &amp; Zev Bryant for reporting their design of a fast molecular machine whose direction can be reversed back and forth by RNA. The paper <b><a href="https://dx.doi.org/10.1038/s41565-017-0005-y">"Controllable molecular motors engineered from myosin and RNA"</a></b> and a commentary are now out in Nature Nanotechnology.
             </p>
-
-
-<a class="read-more" href="https://cen.acs.org/articles/95/i45/Engineered-myosin-motor-uses-RNA..html" rel="noopener noreferrer external" target="_blank">Read more →</a>

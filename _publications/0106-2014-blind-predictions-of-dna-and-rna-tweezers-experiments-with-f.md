@@ -11,5 +11,5 @@ order: 106
 link_labels:
   - "Software"
 link_urls:
-  - "http://helixmc.readthedocs.org/en/latest/"
+  - "https://helixmc.readthedocs.io/"
 ---

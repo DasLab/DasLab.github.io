@@ -11,5 +11,5 @@ order: 96
 link_labels:
   - "Software"
 link_urls:
-  - "http://rmdb.stanford.edu/tools/docs/reeffit/"
+  - "https://ribokit.github.io/REEFFIT/"
 ---

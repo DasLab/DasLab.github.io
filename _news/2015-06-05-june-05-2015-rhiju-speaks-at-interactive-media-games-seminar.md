@@ -5,7 +5,7 @@ image: /assets/images/news/mediax.jpg
 ---
 
 <p class="TEXT">
-              Rhiju speaks at Interactive Media &amp; Games <a href="http://mediax.stanford.edu/page/interactive-media-games-spring-2015" target="_blank">seminar</a> about 'massive open laboratory’, which is an expansion of the conventional video game and computer-assisted design of RNA molecules.
+              Rhiju speaks at Interactive Media &amp; Games seminar about 'massive open laboratory’, which is an expansion of the conventional video game and computer-assisted design of RNA molecules.
             </p>
 
 

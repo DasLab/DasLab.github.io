@@ -8,8 +8,4 @@ pages: "W498-W501"
 pdf: /assets/pdfs/2015_Yesselman_NAR.pdf
 doi: "http://nar.oxfordjournals.org/content/43/W1/W498"
 order: 99
-link_labels:
-  - "Server"
-link_urls:
-  - "http://rnaredesign.stanford.edu/"
 ---

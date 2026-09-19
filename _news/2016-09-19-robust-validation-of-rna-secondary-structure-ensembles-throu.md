@@ -9,4 +9,4 @@ image: /assets/images/news/t47_poster_small.png
             </p>
 
 
-<a class="read-more" href="https://daslab.stanford.edu/site_data/pub_pdf/2016_Tian_QRB.pdf" rel="noopener noreferrer external" target="_blank">Read more →</a>
+<a class="read-more" href="/assets/pdfs/2016_Tian_QRB.pdf" rel="noopener noreferrer external" target="_blank">Read more →</a>
