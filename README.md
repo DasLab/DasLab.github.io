@@ -18,7 +18,20 @@ bundle exec jekyll serve
 
 ## Hosting
 
-Deployed via GitHub Pages at **https://daslab.stanford.edu**, built by the workflow at `.github/workflows/pages.yml`. Every push to `main` triggers a rebuild (~30 seconds).
+Deployed via GitHub Pages at **https://daslab.stanford.edu**, built by the workflow at
+`.github/workflows/pages.yml`. Every push to `main` triggers a rebuild (~30 seconds).
+
+**Build type: GitHub Actions** (`build_type: workflow`), not the legacy Pages Jekyll builder.
+Check deploy status with:
+
+```bash
+gh run list --repo DasLab/DasLab.github.io --limit 3
+```
+
+`gh api repos/DasLab/DasLab.github.io/pages/builds/latest` returns **404** for this repo —
+that endpoint only reports legacy Pages builds. The sibling site `DasLab/rmdb.github.io`
+*does* use the legacy builder, so the two repos need different deploy checks; don't copy the
+command from one to the other.
 
 ## Re-running the content scraper
 
