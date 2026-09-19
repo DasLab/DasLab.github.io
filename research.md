@@ -30,8 +30,8 @@ permalink: /research/
 
 <div class="research-row">
   <div class="research-heading"><span class="large">Rational</span><br><span class="accent">RNA design</span><br><span class="thin">&amp; videogames</span></div>
-  <p>We aim to design new RNA molecules for basic science, diagnostics, and therapeutics. Our videogame project EteRNA seeks missing rules and novel molecules for medicine by giving citizen scientists access to high-throughput wet-lab experiments.</p>
+  <p>We aim to design new RNA molecules for basic science, diagnostics, and therapeutics. Our videogame project Eterna seeks missing rules and novel molecules for medicine by giving citizen scientists access to high-throughput wet-lab experiments.</p>
   <a href="https://eternagame.org/" target="_blank" rel="noopener noreferrer external">
-    <img src="{{ '/assets/images/site/public/img_research_eterna.jpg' | relative_url }}" alt="EteRNA game project">
+    <img src="{{ '/assets/images/site/public/img_research_eterna.jpg' | relative_url }}" alt="Eterna game project">
   </a>
 </div>

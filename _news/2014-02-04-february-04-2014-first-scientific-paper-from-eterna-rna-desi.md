@@ -1,11 +1,11 @@
 ---
-title: "February 04, 2014 First scientific paper from EteRNA, \"RNA Design Rules from a Massive Open Laboratory\", published in PNAS"
+title: "February 04, 2014 First scientific paper from Eterna, \"RNA Design Rules from a Massive Open Laboratory\", published in PNAS"
 date: 2014-02-04
 image: /assets/images/news/Eterna_paper_figure.png
 ---
 
 <p class="TEXT">
-              First scientific paper from EteRNA, "RNA Design Rules from a Massive Open Laboratory", published in PNAS. A nice highlight in Science magazine was also published here: <a href="https://www.sciencemag.org/content/343/6170/475.summary" target="_blank">Online Video Game Plugs Players Into Remote-Controlled Biochemistry Lab</a>.
+              First scientific paper from Eterna, "RNA Design Rules from a Massive Open Laboratory", published in PNAS. A nice highlight in Science magazine was also published here: <a href="https://www.sciencemag.org/content/343/6170/475.summary" target="_blank">Online Video Game Plugs Players Into Remote-Controlled Biochemistry Lab</a>.
             </p>
 
 

@@ -5,7 +5,7 @@ image: /assets/images/news/rna_emblem.gif
 ---
 
 <p class="TEXT">
-              Clarence Cheng presented a new technology for solving RNA 3D folds through multiplexed hydroxyl radical cleavage analysis (MOHCA-seq) at the international RNA society meeting on June 3-8, 2014 in Quebec City, Canada. Congratulations to Clarence for being selected to give a talk in the High Throughput methods session. Rhiju also presented on EteRNA at the Bioinformatics Workshop at the meeting.
+              Clarence Cheng presented a new technology for solving RNA 3D folds through multiplexed hydroxyl radical cleavage analysis (MOHCA-seq) at the international RNA society meeting on June 3-8, 2014 in Quebec City, Canada. Congratulations to Clarence for being selected to give a talk in the High Throughput methods session. Rhiju also presented on Eterna at the Bioinformatics Workshop at the meeting.
             </p>
 
 
