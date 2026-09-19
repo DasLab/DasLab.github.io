@@ -5,7 +5,7 @@ authors: Townley, J., Kladwang, W., Baker, D., Blair, H. M., Choe, C. A., El Nes
 journal: Science
 volume: "393"
 pages: "931-937"
-thumb: /assets/images/publications/Mol9.png
+thumb: /assets/images/publications/pseudoknot_rna.png
 pdf: /assets/pdfs/Townley_Kladwang_Science_2026.pdf
 doi: "https://dx.doi.org/10.1126/science.aeg6829"
 featured: True
